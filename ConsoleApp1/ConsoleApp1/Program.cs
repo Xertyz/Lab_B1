@@ -44,6 +44,9 @@ class Calculator
                     return;
                 }
                 break;
+            default:
+                Console.WriteLine("Ошибка: Неверная операция!");
+                return;
         }
 
         Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
