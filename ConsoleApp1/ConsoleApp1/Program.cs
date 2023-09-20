@@ -34,8 +34,19 @@ class Calculator
                 result = num1 * num2;
                 break;
             case '/':
-                result = num1 / num2;
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    Console.WriteLine("Error: divide by zero");
+                    return;
+                }
                 break;
+            default:
+                Console.WriteLine("Ошибка: Неверная операция!");
+                return;
         }
 
         Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
