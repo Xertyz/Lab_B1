@@ -8,7 +8,7 @@ class Calculator
         double num1, num2;
         char operation;
 
-        Console.WriteLine("Simple Console Calculator");
+        Console.WriteLine("Console Calculator");
         Console.WriteLine("Available operations: +, -, *, /");
 
         Console.Write("Input first number: ");
