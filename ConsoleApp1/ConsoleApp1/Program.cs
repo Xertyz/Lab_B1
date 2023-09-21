@@ -5,8 +5,17 @@ class Calculator
 {
     static void Main()
     {
+        Console.WriteLine("Welcome to my simple calculator!");
+        Task.Delay(1000).Wait();
+        Console.Clear();
+
+        Calc();
+    }
+
+    static void Calc()
+    {
         double num1, num2;
-        char operation;
+        char operation, answer;
 
         Console.WriteLine("Simple Console Calculator");
         Console.WriteLine("Available operations: +, -, *, /");
@@ -39,5 +48,17 @@ class Calculator
         }
 
         Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
+
+        Console.WriteLine("Exit program? Type Y[yes]/N[no]");
+        answer = Console.ReadLine()[0];
+        if (answer.ToString() == "Y")
+        {
+            Environment.Exit(0);
+        }
+        else if (answer.ToString() == "N")
+        {
+            Console.Clear();
+            Calc();
+        }
     }
 }
